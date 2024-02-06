@@ -146,19 +146,21 @@ public class Skitnerdig extends JFrame {
 				for(int i = 0; i < lista.size(); i++) {
 					if(lista.get(i).getName().equals(namn)) {
 						lista.get(i).setTel(tel);
-						if(lista.get(i).getName().equals(namn)) {
-							lista.remove(i);
+					}}
 							textArea.setText(null);
 							for(int a=0; a< lista.size(); a++) {
+								textArea.append(lista.get(a).getKontakt());
 
 							}
-							textArea.append(lista.get(i).getKontakt());
-
-						}						
+							
+							textArea.setText("");
+							for(int a = 0; a< lista.size();a++) {
+								textArea.append(lista.get(a).getKontakt());
+												}						
 						
-					}
+					
 
-				}
+				
 				
 			}
 		});
@@ -166,6 +168,21 @@ public class Skitnerdig extends JFrame {
 		contentPane.add(btnchange);
 
 		JButton btnsearch = new JButton("Sök");
+		btnsearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String namn = txtinname.getText();
+				String tel = txtinnum.getText();
+				
+				textArea.setText(null);
+				
+				for(int i=0; i<lista.size(); i++) {
+					if(lista.get(i).getName().equals(namn)) {
+						textArea.append(lista.get(i).getKontakt());
+					}
+					
+				}
+			}
+		});
 		btnsearch.setBounds(299, 189, 117, 25);
 		contentPane.add(btnsearch);
 

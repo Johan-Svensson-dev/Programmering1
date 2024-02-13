@@ -11,6 +11,7 @@
 	<classpathentry kind="src" path="TryCatch"/>
 	<classpathentry kind="src" path="GUI"/>
 	<classpathentry kind="src" path="Objekt"/>
+	<classpathentry kind="src" path="sort&amp;sok"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre">
 		<attributes>
 			<attribute name="module" value="true"/>
